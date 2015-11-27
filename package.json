@@ -1,0 +1,24 @@
+{
+  "name": "sam-treasure-hunt",
+  "version": "1.0.0",
+  "description": "sam-tresure-hunt arrr",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.4.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "js-sim-pier-seb",
+  "license": "GNU"
+}

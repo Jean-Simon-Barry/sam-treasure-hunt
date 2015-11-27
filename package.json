@@ -15,8 +15,8 @@
     "mocha": "^2.3.4"
   },
   "scripts": {
-    "test": "make test"
-	"start": "node index.js"
+    "test": "make test",
+    "start": "node index.js"
   },
   "keywords": [
     "npm"

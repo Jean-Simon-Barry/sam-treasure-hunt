@@ -16,6 +16,7 @@
   },
   "scripts": {
     "test": "make test"
+	"start": "node index.js"
   },
   "keywords": [
     "npm"

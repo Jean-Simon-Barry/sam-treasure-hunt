@@ -1,0 +1,46 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+*.log
+
+# Local configuration #
+#######################
+.classpath
+.project
+.settings
+.pydevproject
+.externalToolBuilders
+.checkstyle
+
+# Local SAM configuration #
+#######################
+war/src/main/resources/components.properties
+war/src/main/resources/galaxieGenerator.properties
+war/src/main/resources/galaxieValidator.properties
+war/src/main/resources/seam.properties
+
+# Build folder #
+################
+target/
+classes/
+generated-java/
+bin/
+*.orig
+tinymum/sign.bat
+war/velocity.log
+war/.tern-project
+ui/.tscache/
+ui/src/main/app/.baseDir.ts
+ui/*.tmp.txt
+
+!tinymum/src/main/resources/codegen/codegen.dll
+!tinymum/src/main/resources/codegen/codegen.exe
+!tinymum/src/main/resources/codegen/tag.dll
+!tinymum/src/main/resources/codegen/zlib1.dll
+!tinymum/src/main/resources/ffmpeg/ffmpeg.exe

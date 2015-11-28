@@ -15,9 +15,9 @@
 #    node simple_reverse.js
 #
 
-Slack = require '..'
+Slack = require 'slack-client'
 
-token = 'xoxb-15471013285-X2vQGqVSYMttQ7zW3irJhBIR' # Add a bot at https://my.slack.com/services/new/bot and copy the token here.
+token = 'xoxb-15483553575-9Q0ORjmpgQNn0prpfbstm4sm' # Add a bot at https://my.slack.com/services/new/bot and copy the token here.
 autoReconnect = true
 autoMark = true
 

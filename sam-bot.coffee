@@ -61,11 +61,12 @@ slack.on 'message', (message) ->
 
   # Respond to messages with the reverse of the text received.
   if type is 'message' and text? and channel?
-    response = text.split('').reverse().join('')
-    channel.send response
-    console.log """
-      @#{slack.self.name} responded with "#{response}"
-    """
+	if message.substring(0,7) === '@sam-bot'
+		response = text.split('').reverse().join('')
+		channel.send response
+		console.log """
+		@#{slack.self.name} responded with "#{response}"
+		"""
   else
     #this one should probably be impossible, since we're in slack.on 'message' 
     typeError = if type isnt 'message' then "unexpected type #{type}." else null

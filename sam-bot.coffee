@@ -17,7 +17,7 @@
 
 Slack = require 'slack-client'
 
-token = 'xoxb-15483553575-9Q0ORjmpgQNn0prpfbstm4sm' # Add a bot at https://my.slack.com/services/new/bot and copy the token here.
+token = 'add-key-here' # Add a bot at https://my.slack.com/services/new/bot and copy the token here.
 autoReconnect = true
 autoMark = true
 

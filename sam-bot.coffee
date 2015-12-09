@@ -1,20 +1,3 @@
-# This is a simple example of how to use the slack-client module in CoffeeScript. It creates a
-# bot that responds to all messages in all channels it is in with a reversed
-# string of the text received.
-#
-# To run, copy your token below, then, from the project root directory:
-#
-# To run the script directly
-#    npm install
-#    node_modules/coffee-script/bin/coffee examples/simple_reverse.coffee 
-#
-# If you want to look at / run / modify the compiled javascript
-#    npm install
-#    node_modules/coffee-script/bin/coffee -c examples/simple_reverse.coffee 
-#    cd examples
-#    node simple_reverse.js
-#
-
 Slack = require 'slack-client'
 
 token = 'add-key-here' # Add a bot at https://my.slack.com/services/new/bot and copy the token here.
@@ -24,7 +7,7 @@ autoMark = true
 slack = new Slack(token, autoReconnect, autoMark)
 
 slack.on 'open', ->
-  channels = []
+  channels = ['sam-games']
   groups = []
   unreads = slack.getUnreadCount()
 
@@ -61,12 +44,11 @@ slack.on 'message', (message) ->
 
   # Respond to messages with the reverse of the text received.
   if type is 'message' and text? and channel?
-	if message.substring(0,7) === '@sam-bot'
-		response = text.split('').reverse().join('')
-		channel.send response
-		console.log """
-		@#{slack.self.name} responded with "#{response}"
-		"""
+    response = text.split('').reverse().join('')
+    channel.send response
+    console.log """
+      @#{slack.self.name} responded with "#{response}"
+    """
   else
     #this one should probably be impossible, since we're in slack.on 'message' 
     typeError = if type isnt 'message' then "unexpected type #{type}." else null

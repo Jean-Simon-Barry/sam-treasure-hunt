@@ -1,30 +1,13 @@
-# This is a simple example of how to use the slack-client module in CoffeeScript. It creates a
-# bot that responds to all messages in all channels it is in with a reversed
-# string of the text received.
-#
-# To run, copy your token below, then, from the project root directory:
-#
-# To run the script directly
-#    npm install
-#    node_modules/coffee-script/bin/coffee examples/simple_reverse.coffee 
-#
-# If you want to look at / run / modify the compiled javascript
-#    npm install
-#    node_modules/coffee-script/bin/coffee -c examples/simple_reverse.coffee 
-#    cd examples
-#    node simple_reverse.js
-#
+Slack = require 'slack-client'
 
-Slack = require '..'
-
-token = 'xoxb-15471013285-X2vQGqVSYMttQ7zW3irJhBIR' # Add a bot at https://my.slack.com/services/new/bot and copy the token here.
+token = '' # Add a bot at https://my.slack.com/services/new/bot and copy the token here.
 autoReconnect = true
 autoMark = true
 
 slack = new Slack(token, autoReconnect, autoMark)
 
 slack.on 'open', ->
-  channels = []
+  channels = ['sam-games']
   groups = []
   unreads = slack.getUnreadCount()
 
